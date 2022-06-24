@@ -1,0 +1,83 @@
+=====================================================
+PROGRESS stack trace as of Fri Jun  3 18:42:44 2022
+=====================================================
+
+Progress OpenEdge Release 12.2 build 1170 on WINNT 
+
+Startup parameters:
+-pf C:\Progress\OpenEdge\startup.pf,-cpinternal ISO8859-1,-cpstream ISO8859-1,-cpcoll Basic,-cpcase Basic,-d mdy,-numsep 44,-numdec 46,(end .pf),-wy,-nosplash,-debugalert,-inp 16000,-tok 4000,-rereadnolock,-s 200,-mmax 65534,-T C:/OpenEdge/WRK,-p C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.2.0.00\runtime\_server.p
+
+Exception code: C0000005 ACCESS_VIOLATION
+Fault address:  00007FFAD9C8364D 01:00000000003B264D C:\Progress\OpenEdge\bin\prow.dll
+
+Registers:
+RAX:00007FFAD9B1EE70
+RBX:0000000000000000
+RCX:000001538859CE40
+RDX:00007FFADA5332B0
+RSI:00007FFADA5332B0
+RDI:0000000000000000
+R8 :0000000000000000
+R9 :0000000000000000
+R10:00000153A41C8FD8
+R11:0000003D304FDAB0
+R12:00000153860D2180
+R13:0000000000000003
+R14:000001538606F808
+R15:0000000000000000
+CS:RIP:0033:00007FFAD9C8364D
+SS:RSP:002B:0000003D304FDCE0  RBP:0000000000000000
+DS:002B  ES:002B  FS:0053  GS:002B
+Flags:00010202
+
+
+Debugging dll: C:\Progress\OpenEdge\bin\DBGHELP.DLL
+Symbol Path:
+ C:\Progress\OpenEdge\bin;C:\Progress\OpenEdge\pdbfiles
+
+
+Call Stack:
+Address           Frame
+00007FFAD9C8364D  0000003D304FDD30  dbut_utSetNumFiles+4AFCD
+00007FFAD9D1C17A  0000003D304FDD60  dbut_utSetNumFiles+E3AFA
+00007FFAD9B1E0B7  0000003D304FDE40  ProStartup+125617
+00007FFAD9FB6F1C  0000003D304FDF20  rcUpgradeRecord+DC64C
+00007FFAD9FC1CC1  0000003D304FDF50  rcUpgradeRecord+E73F1
+00007FFADA0A54C2  0000003D304FDFB0  Progress::ClrBridge::rnProFromClr::runEventDispatcher+12
+00007FFAE5443C9D  0000003D304FDFB8  0000:0000000000000000 
+0000000000000001  0000003D304FDFC0  0000:0000000000000000 
+00007FFBC0000005  0000003D304FDFC8  0000:0000000000000000 
+0000003D304FC4F8  0000003D304FDFD0  0000:0000000000000000 
+
+
+** ABL Stack Trace **
+
+--> adeuib/_uibmain.p at line 5846  (adeuib/_uibmain.r)
+    _ab.p at line 394  (C:\Progress\OpenEdge\gui\_ab.r)
+    runAppBuilder c:/progress/openedge/oeide/eclipse/plugins/com.openedge.pdt.oestudio_12.2.0.00/runtime/_abruntime.p at line 151  (c:\progress\openedge\oeide\eclipse\plugins\com.openedge.pdt.oestudio_12.2.0.00\runtime\_abruntime.p)
+    executeCmd C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.2.0.00\runtime\_server.p at line 255  (C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.2.0.00\runtime\_server.p)
+    ReceiveCommand C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.2.0.00\runtime\_socketclient.p at line 497  (C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.2.0.00\runtime\_socketclient.p)
+    C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.2.0.00\runtime\_server.p at line 174  (C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.2.0.00\runtime\_server.p)
+
+** Persistent procedures/Classes **
+
+Handle  File Name
+000000  adeuib/ide/request/_request.r (STATIC)
+001730  adecomm/as-utils.r
+001686  adecomm/_palette.r
+001685  protools/_protool.r
+001147  adecomm/_winmenu.r
+001146  adeshar/_mlmgr.r
+001027  adeuib/_oeidesync.r
+001011  adeuib/_abfuncs.r
+001010  adecomm/oeideservice.r
+001004  c:\progress\openedge\oeide\eclipse\plugins\com.openedge.pdt.oestudio_12.2.0.00\runtime\_abruntime.p
+001002  C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.2.0.00\runtime\_socketclient.p
+
+** PROPATH **
+C:\Users\omkar.halingali\Progress\Developer Studio 12.2\ChangeManagementAutomation,C:\Progress\OpenEdge\gui\,C:\Progress\OpenEdge\gui\adecomm.pl,C:\Progress\OpenEdge\gui\adecomp.pl,C:\Progress\OpenEdge\gui\adedict.pl,C:\Progress\OpenEdge\gui\adeedit.pl,C:\Progress\OpenEdge\gui\adeicon.pl,C:\Progress\OpenEdge\gui\adeshar.pl,C:\Progress\OpenEdge\gui\adeuib.pl,C:\Progress\OpenEdge\gui\adeweb.pl,C:\Progress\OpenEdge\gui\adexml.pl,C:\Progress\OpenEdge\gui\dataadmin.pl,C:\Progress\OpenEdge\gui\prodict.pl,C:\Progress\OpenEdge\gui\protools.pl,C:\Progress\OpenEdge\gui\OpenEdge.Core.pl,C:\Progress\OpenEdge\gui\OpenEdge.BusinessLogic.pl,C:\Progress\OpenEdge\gui\netlib\OpenEdge.Net.pl,C:\Progress\OpenEdge,C:\Progress\OpenEdge\bin,C:\Progress\OpenEdge\gui,C:\Progress\OpenEdge\gui\ablunit.pl,C:\Progress\OpenEdge\gui\adedesk.pl,C:\Progress\OpenEdge\gui\aderes.pl,C:\Progress\OpenEdge\gui\OpenEdge.ServerAdmin.pl
+
+** Databases (logical/type/physical) **
+   newsport            PROGRESS  C:\OpenEdge\WRK\newsport
+
+** End of Protrace **
